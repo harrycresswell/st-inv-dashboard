@@ -1,0 +1,22 @@
+a {
+  color: $brand-blue;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: darken($brand-blue, 15%);
+  }
+
+  &:visited {
+    border-bottom: 1px solid $brand-blue;
+    text-decoration: none;
+  }
+
+  &:before {
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out
+  }
+}

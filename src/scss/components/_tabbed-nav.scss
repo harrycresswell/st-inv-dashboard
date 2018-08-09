@@ -1,0 +1,8 @@
+/**
+ * Nav icons
+ */
+.TabNav-item:hover,
+.TabNav-item[data-state=open] {
+  color: $brand-blue;
+  border-color: $brand-blue;
+}

@@ -1,0 +1,70 @@
+/**
+ * DashboardAccordion block
+ */
+
+ .DashboardAccordion div {
+   display: inline-block;
+ }
+
+.DashboardAccordion:after {
+  content: '\002B';
+  color: #4f5766;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  border: solid 1px #e8e8e8;
+  width: 32px;
+  height: 32px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.DashboardAccordion--active:after {
+  content: "\2212";
+  color: #4f5766;
+}
+
+.DashboardAccordion-panel {
+  font-size: 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.DashboardAccordion-border {
+  border: solid 1px #e8e8e8;
+}
+
+/**
+ * DashboardAccordion-control elemnet
+ */
+
+.DashboardAccordion-control {
+  position: relative;
+  border: solid 1px $color-border;
+  border-radius: $radius-round;
+  float: left;
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.DashboardAccordion-control--active {
+  background: $color-success;
+  border: solid 1px $color-success;
+}
+
+.DashboardAccordion-control--active:after {
+  border: solid $color-white;
+	border-width: 0 2px 2px 0;
+	content: '';
+  position: absolute;
+  top: 8px;
+	left: 13px;
+  height: 12px;
+	width: 5px;
+	transform: rotate(45deg);
+}

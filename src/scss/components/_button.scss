@@ -1,0 +1,8 @@
+
+.Button--primary {
+  background: $brand-blue;
+
+  &:hover {
+    background: lighten($brand-blue, 5%);
+  }
+}

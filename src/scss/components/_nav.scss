@@ -1,0 +1,222 @@
+.Nav {
+	font-size: 14px;
+	list-style-type: none;
+	width: 100%;
+
+	&--primary {
+		height: 72px;
+		border-bottom: solid 1px $color-border;
+	}
+
+	&--secondary {
+		border-bottom: solid 1px $color-border;
+		height: 48px;
+	}
+
+	//Remove secondary nav items until breakpoint hits tablet
+	@include until($small-screen) {
+	  &--secondary {
+	    display: none;
+	  }
+	 }
+
+	 &-logo {
+		 background-repeat: no-repeat;
+		 display: block;
+		 margin: 13px;
+	 }
+
+	&-logo--ain {
+		background-image: url(../images/ain-logo-dark-with-blue-icon.png);
+		background-repeat: no-repeat;
+		display: block;
+		width: 145px;
+		height: 46px;
+		margin: 12px;
+	}
+
+	&-logo--bricktribe {
+	  background-size: 196px 47px;
+	  width: 198px;
+	  height: 46px;
+	  background-image: url('https://www.bricktribe.com/assets/img/logo/logo-bricktribe-dark-wordmark-color-icon-bg-beta@2x.png');
+	}
+
+	&-logo--seedtribe {
+	  background-size: 246px 46px;
+	  width: 248px;
+	  height: 46px;
+	  background-image: url('https://www.seedtribe.com/assets/img/logo/logo-seedtribe-by-ain-dark-color-icon@2x.png');
+	}
+
+	&-logo--ain-icon {
+		background-image: url(../images/icon-ain-dark-blue.png);
+		width: 47px;
+		height: 47px;
+	}
+
+	@media
+	(-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+			/* Retina-specific stuff here */
+
+		&-logo--ain{
+			background-image: url(../images/icon-ain-dark-blue@2x.png);
+			background-size: 47px 47px;
+		}
+
+		&-logo--ain-icon {
+			background-image: url(../images/ain-logo-dark-with-blue-icon@2x.png);
+			background-size: 147px 49px;
+
+		}
+
+	}
+
+	&__network {
+		font-size: 12px;
+		padding: 1.5rem;
+	}
+
+	@include until($small-screen) {
+		&-network {
+			display: none;
+		}
+	}
+
+	&-items {
+		margin: 0;
+		padding: 0;
+	}
+
+	//Remove all nav items until breakpoint hits tablet
+	@include until($small-screen) {
+	  .Nav-item {
+	    display: none;
+	  }
+	 }
+
+	&-item {
+		display: inline-block;
+	}
+
+	&-link-accent {
+		color: $gray-dark;
+		display: inline-block;
+		position: relative;
+		margin-right: 16px;
+		line-height: 48px;
+	}
+
+	&-link-accent:hover:after,
+	&-link-accent:active {
+		display: block
+	}
+
+	&-link-accent:after {
+		display: none;
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		height: 3px;
+		left: 0;
+		right: 0;
+		background-color: $brand-blue;
+	}
+
+	&-link {
+		color: $gray-darker;
+		display: inline-block;
+		line-height: 72px;
+		padding-right: 32px;
+		text-decoration: none;
+
+		&:hover {
+			color: $gray-darker;
+		}
+
+		&.active {
+			color: $gray-darker;
+		}
+	}
+
+	&-button {
+		border: solid 2px #CDD3D9;
+		background-color: $color-white;
+		padding: 0.5rem 2rem;
+		border-radius: 4px;
+		text-decoration: none;
+		vertical-align: middle;
+		margin-right: 20px;
+	}
+}
+
+//Remove text links until breakpoint hits larger screen
+@include until($large-screen) {
+  .Nav-text {
+    display: none;
+  }
+ }
+
+ .Nav-icon {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 30px;
+	margin-left: 10px;
+	vertical-align: middle;
+ }
+
+// nav alignment
+.Nav-left {
+	float: left;
+}
+
+.Nav-right {
+	float: right;
+}
+
+// search
+.Nav-search {
+	outline: none;
+	border: 0;
+	padding: 1.5rem 0.5rem;
+}
+
+
+
+.Nav-avatar {
+	background: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+	border-radius: 100%;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	vertical-align: middle;
+	margin-right: 16px;
+}
+
+//Secondary Nav – Fundraise
+
+.Nav-itemnudges {
+	padding: 12px;
+
+}
+
+.nudges-count {
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+.Nav-left,
+.Nav-right {
+  border: 0;
+	padding: 0;
+}
+
+.Nav-middle {
+  height: 74px;
+}
+
+input.Nav-search {
+  height: 74px !important;
+}

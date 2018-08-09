@@ -1,0 +1,96 @@
+/**
+ * Filter
+ */
+
+ /**
+ * Component: Filter block
+ */
+
+ .Filter {
+  padding: 16px 0 0 0;
+  border-bottom: solid 1px #e8e8e8;
+}
+
+/**
+* Component: Filter element
+*/
+
+.Filter-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 16px;
+}
+
+/**
+* Component: FilterPopup block
+*/
+
+.FilterPopup {
+  display: none;
+  position: absolute;
+  top: 48px !important;
+  left: 0px;
+  z-index: 10;
+  background: #ffffff;
+  -webkit-box-shadow: 0 14px 36px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 14px 36px 2px rgba(0,0,0,0.4);
+  padding: 32px;
+  overflow-x: hidden;
+  white-space: normal;
+  overflow-y: scroll;
+  max-height: -webkit-calc(100vh - 360px);
+  max-height: calc(100vh - 300px);
+  min-width: 360px;
+}
+
+/**
+* Component: FilterRange block
+*/
+
+.FilterRange {
+  max-width: 300px;
+}
+
+/**
+* Component: FilterRange element
+*/
+
+.FilterRange-val {
+  color: #4A8CFF;
+}
+
+/**
+* Component: FilterSearch element
+*/
+
+.FilterSearch,
+.FilterButton {
+  margin-right: 16px;
+}
+
+@include until($phone-wide) {
+  .FilterSearch,
+  .FilterButton {
+    margin-right: 0;
+  }
+}
+
+@include until($phone-wide) {
+
+  .FilterPopup--quicklinks,
+  .FilterPopup--price,
+  .FilterPopup--country,
+  .FilterPopup--location,
+  .FilterPopup--industry,
+  .FilterPopup--stage,
+  .FilterPopup--language,
+  .FilterPopup--taxrelief,
+  .FilterPopup--fundingtype,
+  .FilterPopup--funding,
+  .FilterPopup--property {
+    left: 0px;
+    margin: 16px;
+    position: fixed;
+   }
+}
